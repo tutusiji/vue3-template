@@ -1,0 +1,23 @@
+{
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "source": {
+    "include": ["."],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_"
+  },
+  "plugins": ["plugins/markdown", "node_modules/jsdoc-type-pratt-parser"],
+  "opts": {
+    "destination": "./docs",
+    "template": "node_modules/minami",
+    "recurse": true
+  },
+  "typescript": {
+    "moduleRoot": "src",
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules"],
+    "typeScriptVersion": "5.0"
+  }
+}
